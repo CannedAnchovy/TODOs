@@ -44,10 +44,12 @@ class TodoApp extends React.Component {
     let doneCount = 0;
     let notDoneCount = 0;
     for (let i = 0; i < this.state.listArray[listId].items.length; i += 1) {
-      if (this.state.listArray[listId].items[i].checked) {
-        doneCount += 1;
-      } else {
-        notDoneCount += 1;
+      if (typeof this.state.listArray[listId].items[i] !== 'undefined') {
+        if (this.state.listArray[listId].items[i].checked) {
+          doneCount += 1;
+        } else {
+          notDoneCount += 1;
+        }
       }
     }
     delete this.state.listArray[listId];
