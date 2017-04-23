@@ -4,7 +4,7 @@ const TodoItem = (props) => {
   const { itemId, listId, checked, handleItemCheck, handleItemDelete } = props;
   return (
     <div className={`todoItem ${checked}`} id={`item${itemId}`} >
-      <button className={`todoItem-checkBtn ${checked}`} onClick={() => handleItemCheck(itemId, listId)} />
+      <button className={`todoItem-checkBtn check${checked}`} onClick={() => handleItemCheck(itemId, listId)} />
       <input
         className="todoItem-text"
         type="text"
